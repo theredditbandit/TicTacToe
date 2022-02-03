@@ -1,4 +1,13 @@
+<<<<<<< Updated upstream
 //Tic Tac Toe
+=======
+/*
+Programme : TicTacToe
+Developer : theredditbandit
+Date of Creation: 04-02-2022
+github: https://github.com/theredditbandit
+*/
+>>>>>>> Stashed changes
 #include<iostream>
 //#include<stdlib.h>
 //#include<conio.h>
