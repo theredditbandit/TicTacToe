@@ -37,33 +37,9 @@ int InitBoard(string a1,string a2,string a3,string b1,string b2,string b3,string
 	cout<<"\t"<<c1<<"\t*"<<"\t"<<c2<<"\t*"<<"\t"<<c3<<"\t"<<endl;
 	cout<<"\t\t*\t\t*\t\t"<<endl;
 	return 0;
-	
-	
-	
-	
-	
 }
 
-int UpdateBoard(char a1,char a2,char a3,char b1,char b2,char b3,char c1,char c2,char c3)
-{	
-//	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
-	char x = 'X', o='O';
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	cout<<"\t"<<a1<<"\t*"<<"\t"<<a2<<"\t*"<<"\t"<<a3<<"\t"<<endl;
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	cout<<"**************************************************"<<endl;
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	cout<<"\t"<<b1<<"\t*"<<"\t"<<b2<<"\t*"<<"\t"<<b3<<"\t"<<endl;
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	cout<<"**************************************************"<<endl;
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	cout<<"\t"<<c1<<"\t*"<<"\t"<<c2<<"\t*"<<"\t"<<c3<<"\t"<<endl;
-	cout<<"\t\t*\t\t*\t\t"<<endl;
-	return 0;
-}
-	
-	
-	
+
 	
 
 int clrscr()
@@ -88,7 +64,14 @@ int StartGame()
 
 int PlayGame()
 {
+	string x = "X", o="O",b="\0";
+	InitBoard(b,b,b,
+			  b,b,b,
+			  b,b,b);
+	cout<<"Enter the coordinate of a box :";
 	
+	cin.get();
+	return 0;
 }
 
 int main()
@@ -96,5 +79,5 @@ int main()
 	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
 	char x = 'X', o='O',b = '\0'; 
 	StartGame();
-	
+	PlayGame();
 }
