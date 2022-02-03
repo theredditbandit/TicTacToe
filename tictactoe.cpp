@@ -1,24 +1,36 @@
-//Tic Tac Toe
+/*
+Programme : TicTacToe
+Developer : theredditbandit
+Date of Creation: 04-02-2022
+github: https://github.com/theredditbandit
+*/
+
+/*
+Programme: TicTacToe-fork
+forked by: flightman69
+github: https://github.com/flightman69
+*/
 #include<iostream>
-//#include<stdlib.h>
-//#include<conio.h>
-#include<io.h>
+//#include<stdlib.h> Not necessary
+//#include<conio.h> Not necessary 
+#include<io.h> 
+int ch = 1; //code that counts the turn
 using namespace std;
-string a1="a1",a2="a2",a3="a3",b1="b1",b2="b2",b3="b3",c1="c1",c2="c2",c3="c3";
+string a1="1",a2="2",a3="3",b1="4",b2="5",b3="6",c1="7",c2="8",c3="9";
 string ga1="\0",ga2="\0",ga3="\0",gb1="\0",gb2="\0",gb3="\0",gc1="\0",gc2="\0",gc3="\0"; //game board variable values
 string b = "\0";
 /*
 This is what the tic-tac-toe board is going to look like 
 		*		*
-	a1	*	a2	*	a3
+	1	*	2	*	3
 		*		*
 *************************
 		*		*
-	b1	*	b2	*	b3
+	4	*	5	*	6
 		*		*
 *************************
 		*		*
-	c1	*	c2	*	c3
+	7	*	8	*	9
 		*		*
 
 */
@@ -57,7 +69,7 @@ int StartGame()
 			  b1,b2,b3,
 			  c1,c2,c3);
 	
-	cout<<"The game will be played using text input only.\nTo play you must enter the coordinate of the box first and then follow it up by an x or an o.\nYou can press capital R to call up this coordinate board anytime while playing the game.(Game will be reset)\nPress Enter to clear this and start playing.";
+	cout<<"The game will be played using text input only.\nTo play enter the coordinate of the box.\nPress Enter to clear this and start playing.";
 	cin.get();
 	clrscr();
 	InitBoard(b,b,b,
@@ -90,9 +102,14 @@ int PlayGame()
 {
 	string x = "X", o="O",X="X",O="O",b="\0";
 	string input ,choice;
-	
 	cout<<"Enter the coordinate of a box :";cin>>input;cout<<endl;
-	cout<<"Enter X or O :";cin>>choice;cout<<endl;
+	if (ch%2 != 0){
+		choice = "X";
+	}else{
+		choice = "O";
+	}
+	ch = ch+1;
+	//cout<<"Enter X or O :";cin>>choice;cout<<endl;
 	cout<<"Enter R if you want to see the rules and coordinate board again :";
 	UpdateBoard(input,choice);
 	cin.get();
@@ -108,3 +125,4 @@ int main()
 	StartGame();
 	PlayGame();
 }
+
