@@ -11,13 +11,15 @@ forked by: flightman69
 github: https://github.com/flightman69
 */
 #include<iostream>
-//#include<stdlib.h> Not necessary
-//#include<conio.h> Not necessary 
-#include<io.h> 
+#ifdef _WIN32
+	#include<io.h>
+#elif __linux__
+	#include<unistd.h>
+#endif 
 int ch = 1; //code that counts the turn
 using namespace std;
 string a1="1",a2="2",a3="3",b1="4",b2="5",b3="6",c1="7",c2="8",c3="9";
-string ga1="\0",ga2="\0",ga3="\0",gb1="\0",gb2="\0",gb3="\0",gc1="\0",gc2="\0",gc3="\0"; //game board variable values
+string ga1=" ",ga2="\0",ga3="\0",gb1="\0",gb2="  ",gb3="\0",gc1="\0",gc2="\0",gc3=" "; //game board variable values
 string b = "\0";
 /*
 This is what the tic-tac-toe board is going to look like 
@@ -56,9 +58,9 @@ int InitBoard(string a1,string a2,string a3,string b1,string b2,string b3,string
 
 	
 
-int clrscr()
+void clrscr()
 {
-	system("cls");
+	system("clear");
 }
 
 int StartGame()
@@ -79,7 +81,7 @@ int StartGame()
 	return 0;
 }
 
-int UpdateBoard(string input , string choice)
+void UpdateBoard(string input , string choice)
 {
 	string R;
 if(input==a1)ga1=choice;
@@ -97,7 +99,42 @@ clrscr();
 InitBoard(ga1,ga2,ga3,gb1,gb2,gb3,gc1,gc2,gc3);
 	
 }
+void win()
+{	
 
+	if(ga1==ga2 && ga2==ga3){
+		cout<<ga1<<" Won !!\n";
+		exit(0);
+		}
+	else if(gb1==gb2 && gb2==gb3){
+		cout<<gb1<<" Won !!\n";
+		exit(0);
+		}
+	else if(gc1==gc2 && gc2==gc3){
+		cout<<gc1<<" Won !!\n";
+		exit(0);
+		}
+	else if(ga1==gb1 && gb1==gc1){
+		cout<<ga1<<" Won !!\n";
+		exit(0);
+		}
+	else if(ga2==gb2 && gb2==gc2){
+		cout<<ga2<<" Won !!\n";
+		exit(0);
+		}
+	else if(ga3==gb3 && gb3==gc3){
+		cout<<ga3<<" Won !!\n";
+		exit(0);
+		}
+	else if(ga1==gb2 && gb2==gc3){
+		cout<<ga1<<" Won !!\n";
+		exit(0);
+		}
+	else if(gc1==gb2 && gb2==ga1){
+		cout<<gc1<<" Won !!\n";
+		exit(0);
+		}
+}
 int PlayGame()
 {
 	string x = "X", o="O",X="X",O="O",b="\0";
@@ -109,11 +146,9 @@ int PlayGame()
 		choice = "O";
 	}
 	ch = ch+1;
-	//cout<<"Enter X or O :";cin>>choice;cout<<endl;
-	cout<<"Enter R if you want to see the rules and coordinate board again :";
 	UpdateBoard(input,choice);
 	cin.get();
-	
+	win();
 	PlayGame();
 	return 0;
 }
@@ -124,5 +159,6 @@ int main()
 	char x = 'X', o='O',b = '\0'; 
 	StartGame();
 	PlayGame();
+	win();
 }
 
