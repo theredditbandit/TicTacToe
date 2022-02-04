@@ -105,34 +105,42 @@ void CheckWin()
 
 	if(ga1==ga2 && ga2==ga3){
 		cout<<ga1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(gb1==gb2 && gb2==gb3){
 		cout<<gb1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(gc1==gc2 && gc2==gc3){
 		cout<<gc1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(ga1==gb1 && gb1==gc1){
 		cout<<ga1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(ga2==gb2 && gb2==gc2){
 		cout<<ga2<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(ga3==gb3 && gb3==gc3){
 		cout<<ga3<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(ga1==gb2 && gb2==gc3){
 		cout<<ga1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 	else if(gc1==gb2 && gb2==ga1){
 		cout<<gc1<<" Won !!\n";
+		cin.get();
 		exit(0);
 		}
 }
