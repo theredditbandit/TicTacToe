@@ -100,7 +100,7 @@ clrscr();
 InitBoard(ga1,ga2,ga3,gb1,gb2,gb3,gc1,gc2,gc3);
 	
 }
-void win()
+void CheckWin()
 {	
 
 	if(ga1==ga2 && ga2==ga3){
@@ -149,7 +149,7 @@ int PlayGame()
 	ch = ch+1;
 	UpdateBoard(input,choice);
 	cin.get();
-	win();
+	CheckWin();
 	PlayGame();
 	return 0;
 }
@@ -160,6 +160,6 @@ int main()
 	char x = 'X', o='O',b = '\0'; 
 	StartGame();
 	PlayGame();
-	win();
+//	win();
 }
 
