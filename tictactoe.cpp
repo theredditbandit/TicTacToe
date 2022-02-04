@@ -9,6 +9,7 @@ github: https://github.com/theredditbandit
 Programme: TicTacToe-fork
 forked by: flightman69
 github: https://github.com/flightman69
+twitter: flightman69
 */
 #include<iostream>
 #ifdef _WIN32
