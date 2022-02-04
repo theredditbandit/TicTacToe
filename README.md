@@ -1,2 +1,10 @@
 # TicTacToe
- A Tic Tac Toe Game in cpp
+ A simple Tic Tac Toe Game in 
+ 
+
+ 
+# TODO
+Still need to add single player mode 
+
+
+

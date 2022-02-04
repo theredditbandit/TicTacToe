@@ -22,6 +22,7 @@ using namespace std;
 string a1="1",a2="2",a3="3",b1="4",b2="5",b3="6",c1="7",c2="8",c3="9";
 string ga1=" ",ga2="\0",ga3="\0",gb1="\0",gb2="  ",gb3="\0",gc1="\0",gc2="\0",gc3=" "; //game board variable values
 string b = "\0";
+bool SinglePlayerMode = 0;
 /*
 This is what the tic-tac-toe board is going to look like 
 		*		*
@@ -195,12 +196,32 @@ int PlayGame()
 	PlayGame();
 	return 0;
 }
+int SinglePlayer()
+{
+	cout<<"Still working on it";
+}
+int MultiPlayer()
+{
+	StartGame();
+	PlayGame();
+	return 0;
+}
+int GameMode()
+{
+	int input;
+	cout<<"1 - Multiplayer"<<endl;
+	cout<<"2 - Singleplayer"<<endl;
+	cout<<"Select which one you want to play (either 1 or 2) :";cin>>input;
+}
 
 int main()
 {
-	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
-	char x = 'X', o='O',b = '\0'; 
-	StartGame();
-	PlayGame();
+//	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
+//	char x = 'X', o='O',b = '\0'; 
+//	StartGame();
+//	PlayGame();
+MultiPlayer();
+
+
 }
 
