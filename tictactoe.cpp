@@ -55,6 +55,23 @@ int InitBoard(string a1,string a2,string a3,string b1,string b2,string b3,string
 	cout<<"\t\t*\t\t*\t\t"<<endl;
 	return 0;
 }
+int WinBoard(char a1,char a2,char a3,char b1,char b2,char b3,char c1,char c2,char c3)
+{	
+//	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
+	char x = 'X', o='O';
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	cout<<"\t"<<a1<<"\t*"<<"\t"<<a2<<"\t*"<<"\t"<<a3<<"\t"<<endl;
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	cout<<"**************************************************"<<endl;
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	cout<<"\t"<<b1<<"\t*"<<"\t"<<b2<<"\t*"<<"\t"<<b3<<"\t"<<endl;
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	cout<<"**************************************************"<<endl;
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	cout<<"\t"<<c1<<"\t*"<<"\t"<<c2<<"\t*"<<"\t"<<c3<<"\t"<<endl;
+	cout<<"\t\t*\t\t*\t\t"<<endl;
+	return 0;
+}
 
 
 	
@@ -102,44 +119,61 @@ InitBoard(ga1,ga2,ga3,gb1,gb2,gb3,gc1,gc2,gc3);
 }
 void CheckWin()
 {	
-
+	char a1,a2,a3,b1,b2,b3,c1,c2,c3;
+	char b = '\0';
 	if(ga1==ga2 && ga2==ga3){
-		cout<<ga1<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=2,a2=2,a3=2,b1=b,b2=b,b3=b,c1=b,c2=b,c3=b);
+		cout<<"\t"<<ga1<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(gb1==gb2 && gb2==gb3){
-		cout<<gb1<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=b,a2=b,a3=b,b1=2,b2=2,b3=2,c1=b,c2=b,c3=b);
+		cout<<gb1<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(gc1==gc2 && gc2==gc3){
-		cout<<gc1<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=b,a2=b,a3=b,b1=b,b2=b,b3=b,c1=2,c2=2,c3=2);
+		cout<<gc1<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(ga1==gb1 && gb1==gc1){
-		cout<<ga1<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=2,a2=b,a3=b,b1=2,b2=b,b3=b,c1=2,c2=b,c3=b);
+		cout<<ga1<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(ga2==gb2 && gb2==gc2){
-		cout<<ga2<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=b,a2=2,a3=b,b1=b,b2=2,b3=b,c1=b,c2=2,c3=b);
+		cout<<ga2<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(ga3==gb3 && gb3==gc3){
-		cout<<ga3<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=b,a2=b,a3=2,b1=b,b2=b,b3=2,c1=b,c2=b,c3=2);
+		cout<<ga2<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
 	else if(ga1==gb2 && gb2==gc3){
-		cout<<ga1<<" Won !!\n";
+		clrscr();
+		WinBoard(a1=2,a2=b,a3=b,b1=b,b2=2,b3=b,c1=b,c2=b,c3=2);
+		cout<<ga2<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
-	else if(gc1==gb2 && gb2==ga1){
-		cout<<gc1<<" Won !!\n";
+	else if(gc1==gb2 && gb2==ga3){
+		clrscr();
+		WinBoard(a1=b,a2=b,a3=2,b1=b,b2=2,b3=b,c1=2,c2=b,c3=b);
+		cout<<ga2<<" Won the game !!\n";
 		cin.get();
 		exit(0);
 		}
