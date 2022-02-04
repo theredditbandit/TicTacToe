@@ -61,7 +61,7 @@ int InitBoard(string a1,string a2,string a3,string b1,string b2,string b3,string
 
 void clrscr()
 {
-	system("clear");
+	system("cls");
 }
 
 int StartGame()
