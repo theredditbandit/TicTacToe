@@ -168,6 +168,5 @@ int main()
 	char x = 'X', o='O',b = '\0'; 
 	StartGame();
 	PlayGame();
-//	win();
 }
 
