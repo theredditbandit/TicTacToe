@@ -12,10 +12,7 @@
 				"${fileDirname}\\**.cpp",
 				"${fileDirname}\\**.h",
 				"-o",
-					// "-g",
-					// "${file}",
-					// "-o",
-					"${fileDirname}\\${fileBasenameNoExtension}.exe"
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 				],
 				"options": {
 					"cwd": "${fileDirname}"
