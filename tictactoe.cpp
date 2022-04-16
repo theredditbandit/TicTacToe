@@ -14,14 +14,9 @@ forked by: flightman69
 github: https://github.com/flightman69
 twitter: flightman69
 */
-#include<iostream>
-#ifdef _WIN32
-	#include<io.h>
-#elif __linux__
-	#include<unistd.h>
-#endif 
+#include"includes.h"
+
 int ch = 1; //counts the turn
-using namespace std;
 string a1="1",a2="2",a3="3",b1="4",b2="5",b3="6",c1="7",c2="8",c3="9";
 string ga1=" ",ga2="\0",ga3="\0",gb1="\0",gb2="  ",gb3="\0",gc1="\0",gc2="\0",gc3=" "; //game board variable values
 string b = "\0";
@@ -217,6 +212,7 @@ int main()
 {
 
 MultiPlayer();
+
 
 }
 

@@ -1,10 +1,13 @@
 # TicTacToe
- A simple Tic Tac Toe Game in 
+ A simple Tic Tac Toe Game in c++.
  
 
  
 # TODO
-Still need to add a GUI
+ - [ ] Clean up the code 
+ - [ ] Use OOP
+ - [ ] Add a GUI
+  
 
 
 
