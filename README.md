@@ -4,7 +4,7 @@
 
  
 # TODO
-Still need to add single player mode 
+Still need to add a GUI
 
 
 
